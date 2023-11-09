@@ -20,6 +20,8 @@ public class CharacterFrequencyController {
         }
 
         List<Map.Entry<Character, Integer>> list = new ArrayList<>(frequencyMap.entrySet());
+        // sort list by value
+        list.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
 
         return list;
     }
